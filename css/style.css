@@ -1,0 +1,18 @@
+.blocks {
+    gap: 1rem;
+    text-align: center;
+}
+
+.clock-container {
+    background-color: aquamarine;
+    max-width: 300px;
+    border-radius: 1rem;
+    ;
+}
+
+.counter-container {
+    background-color: aquamarine;
+    max-width: 300px;
+    border-radius: 1rem;
+    ;
+}
