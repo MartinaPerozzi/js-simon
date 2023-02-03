@@ -37,36 +37,34 @@ function timeNow() {
     theMinutes.innerHTML = (minutes < 10) ? "0" + minutes : minutes;
     theHours.innerHTML = (hours < 10) ? "0" + hours : hours;
     theDays.innerHTML = (days < 10) ? "0" + days : days;
-}
-// CRONOMETRO
-let totalSeconds = 100000;
-const cronometerTime = setInterval(passedTime, 1000);
+    // CRONOMETRO
+    let totalSeconds = 100000;
+    const cronometerTime = setInterval(passedTime, 1000);
 
-function passedTime() {
-    ++totalSeconds;
+    const tomorrow = new Date("2023-02-04 09:30");
+    console.log("tomorrow: " + tomorrow.getTime());
 
-    const seconds = parseInt(totalSeconds % 60);
-    const minutes = parseInt((totalSeconds / 60) % 60);
-    const hours = parseInt((totalSeconds / 60 / 60) % 24);
-    const days = parseInt((totalSeconds / 60 / 60 / 24));
+    let timeLeft = tomorrow - now;
 
-    theSecondsLess.innerHTML = (seconds < 10) ? "0" + seconds : seconds;
-    theMinutesLess.innerHTML = (minutes < 10) ? "0" + minutes : minutes;
-    theHoursLess.innerHTML = (hours < 10) ? "0" + hours : hours;
-    theDaysLess.innerHTML = (days < 10) ? "0" + days : days;
+    function passedTime() {
+        ++totalSeconds;
 
+        const seconds = parseInt(totalSeconds % 60);
+        const minutes = parseInt((totalSeconds / 60) % 60);
+        const hours = parseInt((totalSeconds / 60 / 60) % 24);
+        const days = parseInt((totalSeconds / 60 / 60 / 24));
+
+        theSecondsLess.innerHTML = (seconds < 10) ? "0" + seconds : seconds;
+        theMinutesLess.innerHTML = (minutes < 10) ? "0" + minutes : minutes;
+        theHoursLess.innerHTML = (hours < 10) ? "0" + hours : hours;
+        theDaysLess.innerHTML = (days < 10) ? "0" + days : days;
+
+    }
 }
 // Funzione per cronometro
 
 
 
-passedTime();
-// ESEMPIO 4: DATES MILLISECONDS
-// const now = new Date();
-const tomorrow = new Date("2023-02-04 09:30");
-
-console.log("today: " + now.getTime());
-console.log("tomorrow: " + tomorrow.getTime());
 
 
 
