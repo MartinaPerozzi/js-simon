@@ -21,82 +21,120 @@
 </head>
 
 <body>
-	<div class="container-fluid p-5">
-		<div class="bg mess d-flex">
-			<h2 class="number-current pt-3"></h2>
+	<!-- HEADER -->
+	<header>
+		<div class="d-flex justify-content-center">
+			<h1 class="p-3">CountDown alla correzione</h1>
 		</div>
-		<!-- Clock -->
-		<h2>Orologio</h2>
-		<div class="clock-container d-flex justify-content-center p-2 mb-3">
+	</header>
+	<!-- MAIN -->
+	<div class="container-fluid p-3 clock-crono-container">
 
-			<div class="blocks d-flex">
-				<!-- <div class="counter-block">
-					<div class="counter-block-label">Giorni</div>
-					<div id="years" class="counter-block-number"></div>
-				</div>
-				<div class="counter-block">
-					<div class="counter-block-label">Giorni</div>
-					<div id="months" class="counter-block-number"></div>
-				</div> -->
-
-				<div class="clock-block">
-					<div class="counter-block-label">Giorni</div>
-					<div id="days" class="counter-block-number"></div>
-				</div>
-				<div class="clock-block">
-					<div class="counter-block-label">Ore</div>
-					<div id="hours" class="counter-block-number"></div>
-				</div>
-				<div class="clock-block">
-					<div class="counter-block-label">Minuti</div>
-					<div id="minutes" class="counter-block-number"></div>
-				</div>
-				<div class="clock-block">
-					<div class="counter-block-label">Secondi</div>
-					<div id="seconds" class="counter-block-number"></div>
+		<!-- TIME NOW -->
+		<div class="from-date d-flex flex-column flex-sm-row justify-content-center text-center">
+			<!-- Actual Date -->
+			<div>
+				<h2>Data</h2>
+				<div class="date-container d-flex">
+					<div class="date-block">
+						<div class="date-block-label">Giorno</div>
+						<div id="days" class="date-block-number"></div>
+					</div>
+					<div class="date-block">
+						<div class="date-block-label">Mese</div>
+						<div id="months" class="date-block-number"></div>
+					</div>
+					<div class="date-block">
+						<div class="date-block-label">Anno</div>
+						<div id="years" class="date-block-number"></div>
+					</div>
 				</div>
 			</div>
+			<!-- Clock -->
+			<div>
+				<h2>Orologio</h2>
+				<div class="clock-container d-flex justify-content-center">
 
-		</div>
-		<h2>Cronometro</h2>
-		<!-- Counter -->
-		<div class="counter-container d-flex justify-content-center p-2">
+					<div class="blocks d-flex">
 
-			<div class="blocks d-flex">
-				<!-- <div class="counter-block">
-							<div class="counter-block-label">Giorni</div>
-							<div id="years" class="counter-block-number"></div>
+
+						<div class="clock-block">
+							<div class="counter-block-label">Ore</div>
+							<div id="hours" class="counter-block-number"></div>
 						</div>
+						<div class="clock-block">
+							<div class="counter-block-label">Minuti</div>
+							<div id="minutes" class="counter-block-number"></div>
+						</div>
+						<div class="clock-block">
+							<div class="counter-block-label">Secondi</div>
+							<div id="seconds" class="counter-block-number"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- DATE TO REACH-->
+		<div class="to-date d-flex flex-column flex-sm-row mt-4 justify-content-center text-center">
+			<!-- Reach -->
+			<div>
+				<h2>Data da raggiungere</h2>
+				<!-- Date To reach -->
+				<div class="date-container d-flex">
+					<div class="date-block">
+						<div class="date-block-label">Giorno</div>
+						<div id="day-to-reach" class="date-block-number">06</div>
+					</div>
+					<div class="date-block">
+						<div class="date-block-label">Mese</div>
+						<div id="month-to-reach" class="date-block-number">02</div>
+					</div>
+					<div class="date-block">
+						<div class="date-block-label">Anno</div>
+						<div id="year-to-reach" class="date-block-number">2023</div>
+					</div>
+					<div class="date-block">
+						<div class="date-block-label">Orario</div>
+						<div id="time-to-reach" class="date-block-number">09:30</div>
+					</div>
+				</div>
+			</div>
+			<!-- Cronometer -->
+			<div>
+				<h2>Cronometro</h2>
+				<!-- Counter -->
+				<div class="counter-container d-flex justify-content-center">
+
+					<div class="blocks d-flex">
+
 						<div class="counter-block">
 							<div class="counter-block-label">Giorni</div>
-							<div id="months" class="counter-block-number"></div>
-						</div> -->
+							<div id="days-crono" class="counter-block-number"></div>
+						</div>
+						<div class="counter-block">
+							<div class="counter-block-label">Ore</div>
+							<div id="hours-crono" class="counter-block-number"></div>
+						</div>
+						<div class="counter-block">
+							<div class="counter-block-label">Minuti</div>
+							<div id="minutes-crono" class="counter-block-number"></div>
+						</div>
+						<div class="counter-block">
+							<div class="counter-block-label">Secondi</div>
+							<div id="seconds-crono" class="counter-block-number"></div>
+						</div>
+					</div>
+				</div>
 
-				<div class="counter-block">
-					<div class="counter-block-label">Giorni</div>
-					<div id="days-crono" class="counter-block-number"></div>
-				</div>
-				<div class="counter-block">
-					<div class="counter-block-label">Ore</div>
-					<div id="hours-crono" class="counter-block-number"></div>
-				</div>
-				<div class="counter-block">
-					<div class="counter-block-label">Minuti</div>
-					<div id="minutes-crono" class="counter-block-number"></div>
-				</div>
-				<div class="counter-block">
-					<div class="counter-block-label">Secondi</div>
-					<div id="seconds-crono" class="counter-block-number"></div>
-				</div>
+
 			</div>
-
-
 		</div>
+	</div>
 
-		<input class="btn btn-primary rounded-pill submit-button mt-2" type="button" value="SEND">
-
-		<!-- JAVASCRIPT -->
-		<script type="text/javascript" src="./js/script.js"> </script>
+	<!-- JAVASCRIPT -->
+	<script type="text/javascript" src="./js/script.js"> </script>
 </body>
 
 </html>
