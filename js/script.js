@@ -71,9 +71,9 @@ function countdownCrono() {
     const secondsLeft = Math.floor((distanceTime % (1000 * 60)) / 1000);
     // Scrivili nel HTML
     theDaysLeft.innerHTML = `${daysLeft}`;
-    theHoursLeft.innerHTML = `${hoursLeft}`;
-    theMinutesLeft.innerHTML = `${minutesLeft}`;
-    theSecondsLeft.innerHTML = `${secondsLeft}`;
+    theHoursLeft.innerHTML = (hoursLeft < 10) ? "0" + hoursLeft : hoursLeft;
+    theMinutesLeft.innerHTML = (minutesLeft < 10) ? "0" + minutesLeft : minutesLeft;
+    theSecondsLeft.innerHTML = (secondsLeft < 10) ? "0" + secondsLeft : secondsLeft;
 
     // Quando raggiungi l'obiettivo fermati.
     if (distanceTime <= 0) {
