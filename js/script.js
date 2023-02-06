@@ -18,7 +18,7 @@ const theSecondsLeft = document.getElementById("seconds-crono");
 
 // // Creare un orologio sfruttando le timing function di JS
 
-timeNow()
+timeNow();//INVOCO LA FUNZIONE 
 
 /********************************************
  *                                          *
@@ -51,9 +51,12 @@ function timeNow() {
 }
 // // CRONOMETRO
 // Prendi la data a cui vuoi arrivare
-const countDownDate = new Date("Feb 6, 2023. 09:30:00").getTime();
+const countDownDate = new Date("Feb 7, 2023. 09:30:00").getTime();
 
 // Creo una variabile che conterrà l'intervallo della funzione e la ripeterà all'infinito o finchè non la fermo
+
+countdownCrono()//INVOCO LA FUNZIONE (senza secondo di partenza)
+
 const counter = setInterval(countdownCrono, 1000);
 // Funzione per cronometro
 function countdownCrono() {
@@ -73,9 +76,13 @@ function countdownCrono() {
     theSecondsLeft.innerHTML = `${secondsLeft}`;
 
     // Quando raggiungi l'obiettivo fermati.
-    if (distanceTime < 0) {
-        clearInterval(x);
+    if (distanceTime <= 0) {
+        clearInterval(counter);
         document.getElementById("timer").innerHTML = "TIK TOK!";
+        theDaysLeft.innerHTML = `00`;
+        theHoursLeft.innerHTML = `00`;
+        theMinutesLeft.innerHTML = `00`;
+        theSecondsLeft.innerHTML = `00`;
     }
 };
 
